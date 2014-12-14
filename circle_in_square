@@ -1,0 +1,20 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+	ios_base::sync_with_stdio(false);
+	int T,i=1;
+	double radius;
+	while(cin>>T){
+		while(T--){
+			cin>>radius;
+			double sqr_area=(radius*radius)*4; 
+			double pi=2*acos(0.0);
+			double crcl_area=(pi*radius*radius);
+			cout<<setprecision(2)<<fixed;
+			cout<<"Case "<<i<<": "<<sqr_area-crcl_area<<endl;
+			i++;
+	  }
+	}
+	return 0;
+}
