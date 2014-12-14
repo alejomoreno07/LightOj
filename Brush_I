@@ -1,0 +1,20 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+	int N1,N2,num,i=1;
+	while(cin>>N2){
+		while(N2--){
+			while(cin>>N1){
+				long long acumm=0;
+				while(N1--){
+					cin>>num;
+					acum+=(num>0)? num:0;
+				}
+				cout<<"Case "<<i<<": "<<acum<<endl;
+				i++;
+			}
+	    }
+	}
+	return 0;
+}
