@@ -1,0 +1,56 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+	ios_base::sync_with_stdio(false);
+	int T,n1,n2,n3,n4,i=1;
+	stringstream ss;
+	string tempo;
+	string end="";
+	int num1,num2,num3,num4;
+	char point;
+	string s;
+	while(cin>>T){
+		while(T--){
+			num1=0,num2=0,num3=0,num4=0;
+			end="";
+			cin>>s;
+		    cin>>n1;
+		    cin>>point;
+		    cin>>n2;
+		    cin>>point;
+		    cin>>n3;
+		    cin>>point;
+		    cin>>n4;
+		    for(int i=0;i<=7;i++){
+		    	int curr=1<<i;
+		    	int d1=n1%10,d2=n2%10,d3=n3%10,d4=n4%10;
+		    	num1+=(d1!=0)? curr:0;
+		    	num2+=(d2!=0)? curr:0;
+		    	num3+=(d3!=0)? curr:0;
+		    	num4+=(d4!=0)? curr:0;
+		    	n1/=10,n2/=10,n3/=10,n4/=10;
+		    }
+		    ss.clear();
+			ss<<num1;
+			ss>>tempo;
+			ss.clear();
+			end=end+tempo+".";
+			ss<<num2;
+			ss>>tempo;
+			ss.clear();
+			end=end+tempo+".";
+			ss<<num3;
+			ss>>tempo;
+			end=end+tempo+".";
+			ss.clear();
+			ss<<num4;
+			ss>>tempo;
+			end=end+tempo;
+            string ans=(s==end)? "Yes":"No";
+            cout<<"Case "<<i<<": "<<ans<<endl;
+            i++;
+	    }
+	}
+	return 0;
+}
